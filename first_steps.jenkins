@@ -2,10 +2,6 @@
 // Check ub1 properties
 properties([disableConcurrentBuilds()])
 
-pipeline {
-    agent { 
-        label 'Мастер'
-        }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
