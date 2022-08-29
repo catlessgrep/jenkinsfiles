@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    
+    environment {
+    PROJECT_NAME = "Neptun"
+    OWNER_NAME = "Pavel"
+    }
+
+    stages {
+        stage('1-build') {
+            steps {
+                echo 'Start of stage build'
+                echo 'Building...'
+                echo 'End of stage build'
+            }
+        }
+        stage('2-test') {
+            steps {
+                echo 'Start of stage test'
+                echo 'Hello ${OWNER_NAME}'
+                echo 'Project name is ${PROJECT_NAME}'
+                echo 'Building...'
+                echo 'End of stage test'
+            }
+        }
+        stage('3-deploy') {
+            steps {
+                echo 'Start of stage deploy'
+                echo 'Building...'
+                echo 'End of stage deploy'
+            }
+        }
+    }
+}
